@@ -2,13 +2,16 @@
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/extensions";
-@import "./base/base";
-@import "./base/typography";
 @import "./components/buttons";
 @import "./layout/header";
 @import "./layout/container";
 @import "./layout/nav";
 @import "./layout/form";
-@import "./pages/about";
-@import "./pages/project";
-@import "./pages/work";
+@import "./pages/index";
+@import "./pages/menu1";
+@import "./pages/menu2";
+@import "./pages/menu3";
+@import "./pages/menu4";
+.header {
+    .header__image {height: 20px;}
+}
