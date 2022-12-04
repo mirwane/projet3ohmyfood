@@ -1,7 +1,145 @@
 .map {
-    .conteneur {
+    .map__flex {
         display: flex;
         justify-content: center;
+        align-items: center;
         background-color: $primary-background;
+        height: 50px;
+        i {
+            margin-right: 15px;
+        }
+    }
+}
+.reservation {
+    .reservation__flex {
+        padding: 30px 20px 30px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        background-color: $secondary-background;
+        height: 200px;
+            .reservation__title {
+                font-weight: bold;
+                font-size: 20px;
+            }
+            .reservation__btn {
+                color: white;
+                border-radius: 25px 25px 25px 25px;
+                background-color: $secondary-color;
+                padding: 13px 20px 13px 20px;
+            }
+    }  
+}
+.tutoriel {
+    height: 200px;
+    .tutoriel__title {
+        font-weight: bold;
+        font-size: 25px;
+        margin: 30px 0px 30px 20px;
+    }
+    .tutoriel__flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+    .tutoriel__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        
+        .tutoriel__btn--num {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            margin-right: 230px;
+            border-radius: 20px 20px 20px 20px;
+            border: solid;
+            color: white;
+            border-color: $primary-color;
+            background-color: $primary-color;
+        }
+        .tutoriel__btn--name {
+            display: flex;
+            padding-left: 30px ;
+            margin-left: 30px;
+            align-items: center;
+            border-radius: 15px 15px 15px 15px;
+            height: 50px;
+            width: 230px;
+            background-color: $secondary-background;
+            i {
+                margin-right: 25px;
+                color: $terciaire-background;
+            }
+        }
+    }
+}
+.restaurants {
+    margin-top: 100px;
+    background-color: $secondary-background ;
+    .restaurants__title {
+        font-weight: bold;
+        font-size: 20px;
+        margin: 30px 0px 30px 20px;
+    }
+    .restaurants__flex {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    a {
+        display: flex;
+        flex-direction: column;
+        height: 240px;
+        background-color: white;
+        margin-bottom: 30px;
+        border-radius: 20px 20px 20px 20px;
+        padding-bottom: 10px;
+    
+        img {
+            margin-top: 0px;
+            margin-bottom: 15px;
+            max-width: 350px;
+            max-height: 175px;
+            border-radius: 20px 20px 0px 0px;
+            object-fit: cover;
+            aspect-ratio: 16 / 9;
+            }
+        .restaurants__card-description {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            span {
+                display: flex;
+                margin-left: 15px;
+                align-items: center;
+                align-content: center;
+                text-align: center;
+                font-size: 18px;
+            }
+            i {
+                margin-top: 10px;
+                margin-right: 20px;
+            }
+ 
+        }
+        
+    }
+}
+.footer {
+    img {
+        
     }
 }
