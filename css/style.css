@@ -1,5 +1,23 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
 .header .header__image {
   height: 20px;
+}
+
+.html {
+  margin: auto;
+}
+
+.body {
+  margin: 50px 0px 0px 0px;
+}
+
+.map .conteneur {
+  display: flex;
+  justify-content: center;
+  background-color: #eaeaea;
 }
 
 /*# sourceMappingURL=style.css.map */
