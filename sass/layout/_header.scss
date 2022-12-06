@@ -7,27 +7,3 @@
         height: 50%;
     }
 }
-footer {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 10px 10px 10px;
-    background-color: #353535;
-    justify-content: center;
-    @include tablette;
-    .footer__image {
-        max-width: 100px;
-        filter: invert(100%);
-        margin-left: 10px;
-    }
-    .footer__ul {
-    display: flex;
-    flex-direction: column;
-    @include tablette;
-    .footer__ul--name {
-        display: flex;
-        flex-direction: row;
-        color: white;
-        margin: 10px 10px 0px 10px;
-    }
-}
-}
