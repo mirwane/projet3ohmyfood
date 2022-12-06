@@ -1,0 +1,12 @@
+@mixin tablette {
+    @media screen and (min-width: map-get($breakpoints, tablette))
+    {
+        flex-direction: row;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop))
+    {
+        flex-direction: row;
+    }
+}

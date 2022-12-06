@@ -47,12 +47,15 @@
         align-items: center;
         align-content: center;
         text-align: center;
+        @include desktop;
     }
     .tutoriel__btn {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 15px;
+        margin-right: 5px;
+        margin-left: 5px;
         
         .tutoriel__btn--num {
             display: flex;
@@ -98,48 +101,50 @@
         align-content: center;
         align-items: center;
         flex-direction: column;
-    }
-    a {
-        display: flex;
-        flex-direction: column;
-        height: 240px;
-        background-color: white;
-        margin-bottom: 30px;
-        border-radius: 20px 20px 20px 20px;
-        padding-bottom: 10px;
-    
-        img {
-            margin-top: 0px;
-            margin-bottom: 15px;
-            max-width: 350px;
-            max-height: 175px;
-            border-radius: 20px 20px 0px 0px;
-            object-fit: cover;
-            aspect-ratio: 16 / 9;
-            }
-        .restaurants__card-description {
+        @include desktop;
+        .ligne {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            span {
+            flex-direction: column;
+            @include tablette;
+            a   {
                 display: flex;
-                margin-left: 15px;
-                align-items: center;
-                align-content: center;
-                text-align: center;
-                font-size: 18px;
-            }
-            i {
-                margin-top: 10px;
-                margin-right: 20px;
-            }
+                flex-direction: column;
+                height: 240px;
+                background-color: white;
+                margin-bottom: 30px;
+                border-radius: 20px 20px 20px 20px;
+                padding-bottom: 10px;
+                margin-right: 10px;
+                margin-left: 10px;
+                img {
+                    margin-top: 0px;
+                    margin-bottom: 15px;
+                    max-width: 350px;
+                    max-height: 175px;
+                    border-radius: 20px 20px 0px 0px;
+                    object-fit: cover;
+                    aspect-ratio: 16 / 9;
+                    }
+                .restaurants__card-description {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    span {
+                        display: flex;
+                        margin-left: 15px;
+                        align-items: center;
+                        align-content: center;
+                        text-align: center;
+                        font-size: 18px;
+                    }
+                    i {
+                        margin-top: 10px;
+                        margin-right: 20px;
+                    }
  
-        }
+                }
         
-    }
-}
-.footer {
-    img {
-        
+            }
+        } 
     }
 }

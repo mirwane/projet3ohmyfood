@@ -1,15 +1,50 @@
+@charset "UTF-8";
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
 }
-.header .header__image {
+.header .header__logo {
   height: 50%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px 10px 10px;
+  background-color: #353535;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    flex-direction: row;
+  }
+}
+footer .footer__image {
+  max-width: 100px;
+  filter: invert(100%);
+  margin-left: 10px;
+}
+footer .footer__ul {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  footer .footer__ul {
+    flex-direction: row;
+  }
+}
+footer .footer__ul .footer__ul--name {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  margin: 10px 10px 0px 10px;
 }
 
 body {
   margin: auto;
+  min-width: 320px;
 }
 
 .map .map__flex {
@@ -61,11 +96,18 @@ body {
   align-content: center;
   text-align: center;
 }
+@media screen and (min-width: 1440px) {
+  .tutoriel .tutoriel__flex {
+    flex-direction: row;
+  }
+}
 .tutoriel .tutoriel__btn {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 .tutoriel .tutoriel__btn .tutoriel__btn--num {
   display: flex;
@@ -112,7 +154,21 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.restaurants a {
+@media screen and (min-width: 1440px) {
+  .restaurants .restaurants__flex {
+    flex-direction: row;
+  }
+}
+.restaurants .restaurants__flex .ligne {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .restaurants .restaurants__flex .ligne {
+    flex-direction: row;
+  }
+}
+.restaurants .restaurants__flex .ligne a {
   display: flex;
   flex-direction: column;
   height: 240px;
@@ -120,8 +176,10 @@ body {
   margin-bottom: 30px;
   border-radius: 20px 20px 20px 20px;
   padding-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
-.restaurants a img {
+.restaurants .restaurants__flex .ligne a img {
   margin-top: 0px;
   margin-bottom: 15px;
   max-width: 350px;
@@ -130,12 +188,12 @@ body {
   object-fit: cover;
   aspect-ratio: 16/9;
 }
-.restaurants a .restaurants__card-description {
+.restaurants .restaurants__flex .ligne a .restaurants__card-description {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.restaurants a .restaurants__card-description span {
+.restaurants .restaurants__flex .ligne a .restaurants__card-description span {
   display: flex;
   margin-left: 15px;
   align-items: center;
@@ -143,9 +201,73 @@ body {
   text-align: center;
   font-size: 18px;
 }
-.restaurants a .restaurants__card-description i {
+.restaurants .restaurants__flex .ligne a .restaurants__card-description i {
   margin-top: 10px;
   margin-right: 20px;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}
+.image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.conteneur {
+  display: flex;
+  justify-content: center;
+}
+.conteneur .menu {
+  border-radius: 30px 30px 0px 0px;
+  background-color: #f7f7f7;
+  margin-top: -45px;
+  position: relative;
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+  box-sizing: border-box;
+}
+.conteneur .menu .menu__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.conteneur .menu .menu__title i {
+  margin-top: 30px;
+}
+.conteneur .menu .menu__flex .menu__entrée--title {
+  margin-bottom: 10px;
+}
+.conteneur .menu .menu__flex .menu__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 20px 20px 20px 20px;
+  padding: 10px 20px 10px 10px;
+}
+.conteneur .menu .menu__flex .menu__btn .menu__btn--name {
+  display: flex;
+  flex-direction: column;
+}
+.conteneur .menu .menu__flex .menu__btn .menu__btn--prix {
+  margin-top: 20px;
+}
+.conteneur .commander {
+  display: flex;
+  justify-content: center;
+}
+.conteneur .commander .commander__btn {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: #FF79DA;
+  padding: 13px 20px 13px 20px;
+  width: 150px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
