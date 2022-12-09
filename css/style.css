@@ -1,12 +1,25 @@
-@charset "UTF-8";
-.header {
+.header--menu {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: 70px;
 }
-.header .header__logo {
+.header--menu .header__logo {
   height: 50%;
+}
+.header--menu i {
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  text-align: start;
+  margin-left: 30px;
+}
+.header--menu a {
+  text-decoration: none;
+  color: inherit;
+}
+.header--menu .collapse {
+  visibility: collapse;
 }
 
 footer {
@@ -22,9 +35,11 @@ footer {
   }
 }
 footer .footer__image {
-  max-width: 100px;
+  width: 100px;
+  height: 25px;
   filter: invert(100%);
   margin-left: 10px;
+  margin-right: 50px;
 }
 footer .footer__ul {
   display: flex;
@@ -39,12 +54,26 @@ footer .footer__ul .footer__ul--name {
   display: flex;
   flex-direction: row;
   color: white;
-  margin: 10px 10px 0px 10px;
+  margin: 0px 50px 0px 10px;
+}
+footer .footer__ul .footer__ul--name i {
+  width: 30px;
+}
+footer .footer__ul .footer__ul--name a {
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
   margin: auto;
   min-width: 320px;
+}
+
+.header--index {
+  justify-content: center;
+}
+.header--index .collapse {
+  visibility: collapse;
 }
 
 .map .map__flex {
@@ -76,8 +105,13 @@ body {
 .reservation .reservation__flex .reservation__btn {
   color: white;
   border-radius: 25px 25px 25px 25px;
-  background-color: #FF79DA;
+  background: linear-gradient(#FF79DA, #9356DC);
   padding: 13px 20px 13px 20px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.514);
+}
+.reservation .reservation__flex .reservation__btn:hover {
+  filter: brightness(105%);
+  box-shadow: 0px 0px 3px rgb(0, 0, 0);
 }
 
 .tutoriel {
@@ -96,7 +130,7 @@ body {
   align-content: center;
   text-align: center;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .tutoriel .tutoriel__flex {
     flex-direction: row;
   }
@@ -106,8 +140,12 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 15px;
-  margin-right: 5px;
-  margin-left: 5px;
+  margin-right: 30px;
+  margin-left: 30px;
+  border-radius: 15px 15px 15px 15px;
+  height: 50px;
+  width: 260px;
+  background-color: #f7f7f7;
 }
 .tutoriel .tutoriel__btn .tutoriel__btn--num {
   display: flex;
@@ -116,7 +154,7 @@ body {
   position: absolute;
   height: 20px;
   width: 20px;
-  margin-right: 230px;
+  margin-right: 260px;
   border-radius: 20px 20px 20px 20px;
   border: solid;
   color: white;
@@ -125,16 +163,10 @@ body {
 }
 .tutoriel .tutoriel__btn .tutoriel__btn--name {
   display: flex;
-  padding-left: 30px;
-  margin-left: 30px;
   align-items: center;
-  border-radius: 15px 15px 15px 15px;
-  height: 50px;
-  width: 230px;
-  background-color: #f7f7f7;
 }
 .tutoriel .tutoriel__btn .tutoriel__btn--name i {
-  margin-right: 25px;
+  margin-right: 20px;
   color: #7e7e7e;
 }
 
@@ -181,9 +213,6 @@ body {
   text-decoration: none;
   color: inherit;
 }
-.restaurants .restaurants__flex .ligne a :hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
 .restaurants .restaurants__flex .ligne a img {
   margin-top: 0px;
   margin-bottom: 15px;
@@ -206,9 +235,23 @@ body {
   text-align: center;
   font-size: 18px;
 }
+.restaurants .restaurants__flex .ligne a .restaurants__card-description .coeur {
+  margin-right: 50px;
+}
 .restaurants .restaurants__flex .ligne a .restaurants__card-description i {
   margin-top: 10px;
-  margin-right: 20px;
+}
+.restaurants .restaurants__flex .ligne a .restaurants__card-description .coeur1 {
+  position: absolute;
+}
+.restaurants .restaurants__flex .ligne a .restaurants__card-description .coeur2 {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+  color: #FF79DA;
+}
+.restaurants .restaurants__flex .ligne a .restaurants__card-description .coeur2:hover {
+  opacity: 0.7;
 }
 
 .image {
@@ -218,6 +261,7 @@ body {
 .image img {
   width: 100%;
   object-fit: cover;
+  max-height: 350px;
 }
 
 .conteneur {
@@ -230,6 +274,7 @@ body {
   margin-top: -45px;
   position: relative;
   width: 100%;
+  max-width: 600px;
   padding: 20px 20px 20px 20px;
   box-sizing: border-box;
 }
@@ -238,13 +283,42 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+.conteneur .menu .menu__title .coeur {
+  margin-right: 50px;
+}
 .conteneur .menu .menu__title i {
-  margin-top: 30px;
+  margin-top: 20px;
 }
-.conteneur .menu .menu__flex .menu__entrée--title {
-  margin-bottom: 10px;
+.conteneur .menu .menu__title .coeur1 {
+  position: absolute;
 }
-.conteneur .menu .menu__flex .menu__btn {
+.conteneur .menu .menu__title .coeur2 {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+  color: #FF79DA;
+}
+.conteneur .menu .menu__title .coeur2:hover {
+  opacity: 0.7;
+}
+.conteneur .menu .menu__flex .menu__nom {
+  margin-bottom: 30px;
+}
+.conteneur .menu .menu__flex .menu__nom .menu--title {
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 9px;
+}
+.conteneur .menu .menu__flex .menu__nom .menu--title ::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 40px;
+  bottom: 0;
+  left: 0;
+  background: #99E2D0;
+}
+.conteneur .menu .menu__flex .menu__nom .menu__btn {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -253,11 +327,11 @@ body {
   border-radius: 20px 20px 20px 20px;
   padding: 10px 20px 10px 10px;
 }
-.conteneur .menu .menu__flex .menu__btn .menu__btn--name {
+.conteneur .menu .menu__flex .menu__nom .menu__btn .menu__btn--name {
   display: flex;
   flex-direction: column;
 }
-.conteneur .menu .menu__flex .menu__btn .menu__btn--prix {
+.conteneur .menu .menu__flex .menu__nom .menu__btn .menu__btn--prix {
   margin-top: 20px;
 }
 .conteneur .commander {
@@ -266,13 +340,18 @@ body {
 }
 .conteneur .commander .commander__btn {
   color: white;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   border-radius: 20px 20px 20px 20px;
-  background-color: #FF79DA;
+  background: linear-gradient(#FF79DA, #9356DC);
   padding: 13px 20px 13px 20px;
   width: 150px;
   text-align: center;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.514);
+}
+.conteneur .commander :hover {
+  filter: brightness(105%);
+  box-shadow: 0px 0px 3px rgb(0, 0, 0);
 }
 
 /*# sourceMappingURL=style.css.map */

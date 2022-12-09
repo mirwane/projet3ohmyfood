@@ -1,9 +1,23 @@
-.header {
+.header--menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 50px;
-    .header__logo {
-        height: 50%;
-    }
+    height: 70px;
+        .header__logo {
+            height: 50%;
+        }
+        i {
+            justify-content: flex-start;
+            align-items: flex-start;
+            align-content: flex-start;
+            text-align: start;
+            margin-left: 30px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .collapse {
+            visibility: collapse;
+        }
 }

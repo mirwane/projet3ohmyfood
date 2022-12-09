@@ -8,9 +8,13 @@
 <title>à la française</title>
 </head>
 <body>
-    <header>
-        <a class="header">
+    <header class="header--menu">
+        <a href="index.html">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
         <img src="/images/logo/ohmyfood.png" class="header__logo" alt="logo">
+        <a class="collapse">
+            <i class="fa-solid fa-arrow-right"></i>
         </a>
     </header>
     <section class="image">
@@ -19,57 +23,112 @@
     <section class="conteneur">
         <div class="menu">
             <div class="menu__title">
-                <h1>A la française</h1>
-                <i class="fa-thin fa-heart"></i>
+                <h1>La palette du goût</h1>
+                <div class="coeur">
+                    <i class="coeur1 far fa-heart fa-2x"></i>
+                    <i class="coeur2 fas fa-heart fa-2x"></i>
+                </div>
             </div>
             <div class="menu__flex">
-                <div class="menu__entrée">
-                    <div class="menu__entrée--title">
-                        <span>ENTREES</span>
+                <div class="menu__nom">
+                    <div class="menu--title">
+                        <span>Entrées</span>
                     </div>
                     <div class="menu__btn">
                         <div class="menu__btn--name">
-                            <span><b>1</b></span>
-                            <span>1</span>
+                            <span><b>Fricassée d'escargot</b></span>
+                            <span>Au piment d'Espelette</span>
                         </div>
                         <div class="menu__btn--prix">
-                                <span>99€</span>
+                                <span>25€</span>
+                        </div>
+                    </div>
+                    <div class="menu__btn">
+                        <div class="menu__btn--name">
+                            <span><b>Foie gras de canard mi-cuit</b></span>
+                            <span>Et ses copeaux de truffe noire</span>
+                        </div>
+                        <div class="menu__btn--prix">
+                                <span>35€</span>
+                        </div>
+                    </div>
+                    <div class="menu__btn">
+                        <div class="menu__btn--name">
+                            <span><b>Œuf au plat</b></span>
+                            <span>Assaisonné à la truffe sur lit de caviar</span>
+                        </div>
+                        <div class="menu__btn--prix">
+                                <span>20€</span>
                         </div>
                     </div>
                 </div>
-                <div class="plat">
-                    <div class="menu__entrée--title">
+                <div class="menu__nom">
+                    <div class="menu--title">
                         <span>PLATS</span>
                     </div>
                     <div class="menu__btn">
                         <div class="menu__btn--name">
-                            <span><b>1</b></span>
-                            <span>1</span>
+                            <span><b>Filet de boeuf aux herbes</b></span>
+                            <span>Accompagné de sa ribambelle de légumes</span>
                         </div>
                         <div class="menu__btn--prix">
-                                <span>99€</span>
+                                <span>40€</span>
+                        </div>
+                    </div>
+                    <div class="menu__btn">
+                        <div class="menu__btn--name">
+                            <span><b>Parmentier de queue de boeuf</b></span>
+                            <span>À la truffe noire sur sa purée de panais</span>
+                        </div>
+                        <div class="menu__btn--prix">
+                                <span>35€</span>
+                        </div>
+                    </div>
+                    <div class="menu__btn">
+                        <div class="menu__btn--name">
+                            <span><b>Filet de turbot</b></span>
+                            <span>Aux agrumes</span>
+                        </div>
+                        <div class="menu__btn--prix">
+                                <span>44€</span>
                         </div>
                     </div>
                 </div>
-                <div class="dessert">
-                    <div class="menu__entrée--title">
+                <div class="menu__nom">
+                    <div class="menu--title">
                         <span>DESSERTS</span>
                     </div>
                     <div class="menu__btn">
                         <div class="menu__btn--name">
-                            <span><b>1</b></span>
-                            <span>1</span>
+                            <span><b>Paris-Brest</b></span>
+                            <span>Revisité</span>
                         </div>
                         <div class="menu__btn--prix">
-                                <span>99€</span>
+                                <span>18€</span>
                         </div>
-                    </div>                  
+                    </div>   
+                    <div class="menu__btn">
+                        <div class="menu__btn--name">
+                            <span><b>Macaron au chocolat d'exception</b></span>
+                            <span>Et glace à la vanille de Madagascar</span>
+                        </div>
+                        <div class="menu__btn--prix">
+                                <span>22€</span>
+                        </div>
+                    </div>   
+                    <div class="menu__btn">
+                        <div class="menu__btn--name">
+                            <span><b>Mousse au chocolat</b></span>
+                            <span>Au piment d'Espelette et à la truffe noire</span>
+                        </div>
+                        <div class="menu__btn--prix">
+                                <span>23€</span>
+                        </div>
+                    </div>              
                 </div>
             </div>
             <section class="commander">
-            <a class="commander__btn">
-                <span>Commandez</span>
-            </a>
+                <a class="commander__btn">Commandez</a>
             </section>
         </div>
     </section>
@@ -88,7 +147,7 @@
                 <span>Mentions légales</span>
             </div> 
             <div class="footer__ul--name">
-                <span>Contact</span>
+                <a href="mailto:mail@gmail.com"><span>Contact</span></a>
             </div> 
     </footer> 
 </body>

@@ -8,9 +8,13 @@
 <title>Ohmyfood!</title>
 </head>
 <body>
-    <header>
-        <a class="header">
+    <header class="header--menu">
+        <a class="collapse">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
         <img src="/images/logo/ohmyfood.png" class="header__logo" alt="logo">
+        <a class="collapse">
+            <i class="fa-solid fa-arrow-right"></i>
         </a>
     </header>
     <section class="map">
@@ -32,34 +36,28 @@
     </section>
     <section class="tutoriel">
         <div class="tutoriel__title">Fonctionnement</div>
-        <div class="tutoriel__flex">
-            <div class="tutoriel__btn">
-                <div class="tutoriel__btn--num">
-                    <span>1</span>
-                </div>
-                <div class="tutoriel__btn--name">
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                        <span>Choisissez un restaurant</span>
-                </div>
-            </div>
-            <div class="tutoriel__btn">
-                <div class="tutoriel__btn--num">
-                    <span>2</span>
-                </div>
-                <div class="tutoriel__btn--name">
+            <div class="tutoriel__flex">
+                    <div class="tutoriel__btn">
+                        <div class="tutoriel__btn--num"><span>1</span></div>
+                        <div class="tutoriel__btn--name">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <span>Choisissez un restaurant</span>
+                        </div>
+                    </div>
+                <div class="tutoriel__btn">
+                    <div class="tutoriel__btn--num"><span>2</span></div>
+                    <div class="tutoriel__btn--name">
                         <i class="fa-solid fa-list-ul"></i>
                         <span>Composez votre menu</span>
+                    </div>
                 </div>
-            </div>
-            <div class="tutoriel__btn">
-                <div class="tutoriel__btn--num">
-                    <span>3</span>
-                </div>
-                <div class="tutoriel__btn--name">
+                <div class="tutoriel__btn">
+                    <div class="tutoriel__btn--num"><span>3</span></div>
+                    <div class="tutoriel__btn--name">
                         <i class="fa-solid fa-store"></i>
-                        <span>Dégustez au restaurant</span>
+                        Dégustez au restaurant
+                    </div>
                 </div>
-            </div>
         </div>
     </section>
     <section class="restaurants">
@@ -75,7 +73,10 @@
                                 <span><b>La palette du goût</b></span>
                                 <span>Ménilmontant</span>
                             </div>
-                            <i class="fa-thin fa-heart"></i>
+                            <div class="coeur">
+                            <i class="coeur1 far fa-heart fa-2x"></i>
+                            <i class="coeur2 fas fa-heart fa-2x"></i>
+                            </div>
                         </div>
                     </a>
                     <a href="lanoteenchantee.html"class="restaurants__card">
@@ -85,7 +86,10 @@
                                 <span><b>La note echantée</b></span>
                                 <span>Charonne</span>
                             </div>
-                            <i class="fa-thin fa-heart"></i>
+                            <div class="coeur">
+                            <i class="coeur1 far fa-heart fa-2x"></i>
+                            <i class="coeur2 fas fa-heart fa-2x"></i>
+                        </div>
                         </div>
                     </a>
                 </div>
@@ -97,7 +101,10 @@
                                 <span><b>A la française</b></span>
                                 <span>Cité Rouge</span>
                             </div>
-                            <i class="fa-thin fa-heart"></i>
+                            <div class="coeur">
+                            <i class="coeur1 far fa-heart fa-2x"></i>
+                            <i class="coeur2 fas fa-heart fa-2x"></i>
+                        </div>
                         </div>
                     </a>
                     <a href="ledelicedessens.html" class="restaurants__card">
@@ -107,7 +114,10 @@
                                 <span><b>Le délice des sens</b></span>
                                 <span>Folie-Mericourt</span>
                             </div>
-                            <i class="fa-thin fa-heart"></i>
+                            <div class="coeur">
+                            <i class="coeur1 far fa-heart fa-2x"></i>
+                            <i class="coeur2 fas fa-heart fa-2x"></i>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -128,7 +138,7 @@
                 <span>Mentions légales</span>
             </div> 
             <div class="footer__ul--name">
-                <span>Contact</span>
+                <a href="mailto:mail@gmail.com"><span>Contact</span></a>
             </div> 
     </footer> 
 </body>
