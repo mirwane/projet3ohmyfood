@@ -1,3 +1,58 @@
+.tutoriel__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-right: 30px;
+  margin-left: 30px;
+  border-radius: 15px 15px 15px 15px;
+  height: 50px;
+  width: 260px;
+  background-color: #f7f7f7;
+}
+.tutoriel__btn .tutoriel__btn--num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  margin-right: 260px;
+  border-radius: 20px 20px 20px 20px;
+  border: solid;
+  color: white;
+  border-color: #9356DC;
+  background-color: #9356DC;
+}
+.tutoriel__btn .tutoriel__btn--name {
+  display: flex;
+  align-items: center;
+}
+.tutoriel__btn .tutoriel__btn--name i {
+  margin-right: 20px;
+  color: #7e7e7e;
+}
+
+.commander {
+  display: flex;
+  justify-content: center;
+}
+.commander .commander__btn {
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 20px 20px 20px 20px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  padding: 13px 20px 13px 20px;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.514);
+}
+.commander :hover {
+  filter: brightness(105%);
+  box-shadow: 0px 0px 3px rgb(0, 0, 0);
+}
+
 .header--menu {
   display: flex;
   justify-content: space-between;
@@ -122,6 +177,11 @@ body {
   font-size: 25px;
   margin: 30px 0px 30px 20px;
 }
+@media (min-width: 1024px) {
+  .tutoriel .tutoriel__title {
+    text-align: center;
+  }
+}
 .tutoriel .tutoriel__flex {
   display: flex;
   flex-direction: column;
@@ -130,80 +190,45 @@ body {
   align-content: center;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .tutoriel .tutoriel__flex {
     flex-direction: row;
   }
 }
-.tutoriel .tutoriel__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15px;
-  margin-right: 30px;
-  margin-left: 30px;
-  border-radius: 15px 15px 15px 15px;
-  height: 50px;
-  width: 260px;
-  background-color: #f7f7f7;
-}
-.tutoriel .tutoriel__btn .tutoriel__btn--num {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  margin-right: 260px;
-  border-radius: 20px 20px 20px 20px;
-  border: solid;
-  color: white;
-  border-color: #9356DC;
-  background-color: #9356DC;
-}
-.tutoriel .tutoriel__btn .tutoriel__btn--name {
-  display: flex;
-  align-items: center;
-}
-.tutoriel .tutoriel__btn .tutoriel__btn--name i {
-  margin-right: 20px;
-  color: #7e7e7e;
-}
 
 .restaurants {
   margin-top: 100px;
+  padding-top: 10px;
   background-color: #f7f7f7;
 }
 .restaurants .restaurants__title {
   font-weight: bold;
   font-size: 20px;
-  margin: 30px 0px 30px 20px;
+  margin-left: 20px;
+}
+@media (min-width: 1024px) {
+  .restaurants .restaurants__title {
+    text-align: center;
+  }
 }
 .restaurants .restaurants__flex {
   display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
   flex-direction: column;
-}
-@media screen and (min-width: 1440px) {
-  .restaurants .restaurants__flex {
-    flex-direction: row;
-  }
 }
 .restaurants .restaurants__flex .ligne {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 1024px) {
   .restaurants .restaurants__flex .ligne {
     flex-direction: row;
+    justify-content: space-around;
   }
 }
 .restaurants .restaurants__flex .ligne a {
   display: flex;
   flex-direction: column;
-  height: 240px;
+  min-width: 300px;
   background-color: white;
   margin-bottom: 30px;
   border-radius: 20px 20px 20px 20px;
@@ -213,14 +238,19 @@ body {
   text-decoration: none;
   color: inherit;
 }
+@media (min-width: 1024px) {
+  .restaurants .restaurants__flex .ligne a {
+    max-width: 483px;
+  }
+}
 .restaurants .restaurants__flex .ligne a img {
   margin-top: 0px;
   margin-bottom: 15px;
-  max-width: 350px;
-  max-height: 175px;
   border-radius: 20px 20px 0px 0px;
   object-fit: cover;
   aspect-ratio: 16/9;
+  width: 100%;
+  height: 100%;
 }
 .restaurants .restaurants__flex .ligne a .restaurants__card-description {
   display: flex;
@@ -253,6 +283,22 @@ body {
 .restaurants .restaurants__flex .ligne a .restaurants__card-description .coeur2:hover {
   opacity: 0.7;
 }
+.restaurants .restaurants__flex .ligne .new::before {
+  content: "Nouveau";
+  color: #008766;
+  position: absolute;
+  background-color: #99e2d0;
+  margin-top: 30px;
+  margin-left: 380px;
+  border-radius: 2px 2px 2px 2px;
+  padding: 3px 6px 3px 6px;
+}
+@media (max-width: 1023px) {
+  .restaurants .restaurants__flex .ligne .new::before {
+    right: 0;
+    margin-right: 50px;
+  }
+}
 
 .image {
   display: flex;
@@ -261,7 +307,7 @@ body {
 .image img {
   width: 100%;
   object-fit: cover;
-  max-height: 350px;
+  max-height: 250px;
 }
 
 .conteneur {
@@ -274,7 +320,6 @@ body {
   margin-top: -45px;
   position: relative;
   width: 100%;
-  max-width: 600px;
   padding: 20px 20px 20px 20px;
   box-sizing: border-box;
 }
@@ -301,6 +346,16 @@ body {
 .conteneur .menu .menu__title .coeur2:hover {
   opacity: 0.7;
 }
+.conteneur .menu .menu__flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media screen and (min-width: 1024px) {
+  .conteneur .menu .menu__flex {
+    flex-direction: row;
+  }
+}
 .conteneur .menu .menu__flex .menu__nom {
   margin-bottom: 30px;
 }
@@ -325,33 +380,62 @@ body {
   background-color: white;
   margin-bottom: 10px;
   border-radius: 20px 20px 20px 20px;
-  padding: 10px 20px 10px 10px;
+  animation: Animation ease 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes Animation {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .conteneur .menu .menu__flex .menu__nom .menu__btn .menu__btn--name {
   display: flex;
   flex-direction: column;
+  padding: 10px 20px 10px 20px;
 }
-.conteneur .menu .menu__flex .menu__nom .menu__btn .menu__btn--prix {
-  margin-top: 20px;
-}
-.conteneur .commander {
+.conteneur .menu .menu__flex .menu__nom .menu__btn .menu__btn__right {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  overflow: hidden;
 }
-.conteneur .commander .commander__btn {
-  color: white;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  border-radius: 20px 20px 20px 20px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  padding: 13px 20px 13px 20px;
-  width: 150px;
-  text-align: center;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.514);
+.conteneur .menu .menu__flex .menu__nom .menu__btn .menu__btn__right .menu__btn--prix {
+  padding: 20px 20px 10px 20px;
 }
-.conteneur .commander :hover {
-  filter: brightness(105%);
-  box-shadow: 0px 0px 3px rgb(0, 0, 0);
+.conteneur .menu .menu__flex .menu__nom .menu__btn .menu__btn__right .menu__btn--check {
+  border-radius: 0px 20px 20px 0px;
+  padding: 10px 20px 10px 20px;
+  background-color: #99E2D0;
+  margin-right: -60px;
+  display: grid;
+  place-items: center;
+}
+.conteneur .menu .menu__flex .menu__nom .menu__btn .menu__btn__right .menu__btn--check i {
+  border-radius: 50%;
+  background: white;
+  padding: 2px 2px 2px 2px;
+  color: #99E2D0;
+}
+.conteneur .menu .menu__flex .menu__nom .menu__btn:hover .menu__btn--check {
+  margin-right: 0px;
+  transition: all 0.5s;
+}
+.conteneur .menu .menu__flex .menu__nom .delay-1 {
+  animation-delay: 0.1s;
+}
+.conteneur .menu .menu__flex .menu__nom .delay-2 {
+  animation-delay: 0.2s;
+}
+.conteneur .menu .menu__flex .menu__nom .delay-3 {
+  animation-delay: 0.3s;
+}
+.conteneur .menu .menu__flex .menu__nom .delay-4 {
+  animation-delay: 0.4s;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -27,21 +27,21 @@
         text-align: center;
         background-color: $secondary-background;
         height: 200px;
-            .reservation__title {
-                font-weight: bold;
-                font-size: 20px;
+        .reservation__title {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .reservation__btn {
+            color: white;
+            border-radius: 25px 25px 25px 25px;
+            background: linear-gradient($secondary-color , $primary-color);
+            padding: 13px 20px 13px 20px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.514);
+        }
+            .reservation__btn:hover {
+                filter: brightness(105%);
+                box-shadow: 0px 0px 3px rgb(0, 0, 0);
             }
-            .reservation__btn {
-                color: white;
-                border-radius: 25px 25px 25px 25px;
-                background: linear-gradient($secondary-color , $primary-color);
-                padding: 13px 20px 13px 20px;
-                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.514);
-            }
-                .reservation__btn:hover {
-                    filter: brightness(105%);
-                    box-shadow: 0px 0px 3px rgb(0, 0, 0);
-                }
     }  
 }
 .tutoriel {
@@ -50,6 +50,9 @@
         font-weight: bold;
         font-size: 25px;
         margin: 30px 0px 30px 20px;
+        @media (min-width: 1024px){
+           text-align: center;
+        }
     }
     .tutoriel__flex {
         display: flex;
@@ -58,66 +61,36 @@
         align-items: center;
         align-content: center;
         text-align: center;
-        @include tablette;
+        @include desktop;
     }
-    .tutoriel__btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 15px;
-        margin-right: 30px;
-        margin-left: 30px; 
-        border-radius: 15px 15px 15px 15px;
-        height: 50px;
-        width: 260px;
-        background-color: $secondary-background;
-        .tutoriel__btn--num {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            height: 20px;
-            width: 20px;
-            margin-right: 260px;
-            border-radius: 20px 20px 20px 20px;
-            border: solid;
-            color: white;
-            border-color: $primary-color;
-            background-color: $primary-color;
-        }
-        .tutoriel__btn--name {
-            display: flex;
-            align-items: center;
-            i {
-                margin-right: 20px;
-                color: $terciaire-background;
-            }
-        }
-    }
+    
 }
 .restaurants {
     margin-top: 100px;
+    padding-top: 10px;
     background-color: $secondary-background ;
     .restaurants__title {
         font-weight: bold;
         font-size: 20px;
-        margin: 30px 0px 30px 20px;
+        margin-left: 20px;
+        @media (min-width: 1024px){
+           text-align: center;
+        }
     }
     .restaurants__flex {
         display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
         flex-direction: column;
-        @include desktop;
         .ligne {
             display: flex;
             flex-direction: column;
-            @include tablette;
+            @media (min-width: 1024px){
+                flex-direction: row;
+                justify-content: space-around;
+            }
             a {
                 display: flex;
                 flex-direction: column;
-                height: 240px;
+                min-width: 300px;
                 background-color: white;
                 margin-bottom: 30px;
                 border-radius: 20px 20px 20px 20px;
@@ -126,14 +99,18 @@
                 margin-left: 10px;
                 text-decoration: none;
                 color: inherit;
+                @media (min-width: 1024px) {
+                    max-width: 483px;
+                }
                 img {
                     margin-top: 0px;
                     margin-bottom: 15px;
-                    max-width: 350px;
-                    max-height: 175px;
                     border-radius: 20px 20px 0px 0px;
                     object-fit: cover;
                     aspect-ratio: 16 / 9;
+                    width: 100%;
+                    height: 100%;
+
                     }
                 .restaurants__card-description {
                     display: flex;
@@ -151,12 +128,10 @@
                         margin-right: 50px;
                     }
                     i {
-                        margin-top: 10px;
-                        
+                        margin-top: 10px;    
                     }
                     .coeur1 {
                         position: absolute;
-
                     }
                     .coeur2 {
                         position: absolute;
@@ -169,6 +144,21 @@
                   }
                 }
             }
+        .new::before {
+            content: "Nouveau";
+            color: #008766;
+            position: absolute;
+            background-color: #99e2d0;
+            margin-top: 30px;
+            margin-left: 380px;
+            border-radius: 2px 2px 2px 2px;
+            padding: 3px 6px 3px 6px;
+            @media (max-width: 1023px){
+                right: 0;
+            margin-right: 50px;
+            }
+             }
+            
         } 
     }
 }
