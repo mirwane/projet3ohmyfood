@@ -55,7 +55,7 @@
                     margin-bottom: 15px;
                     position: relative;
                     padding-bottom: 9px;
-                    ::after {
+                    &::after {
                         content: "";
                         position: absolute;
                         height: 3px;

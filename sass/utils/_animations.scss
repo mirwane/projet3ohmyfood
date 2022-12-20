@@ -17,3 +17,13 @@
         transform: rotate(0);          
     }
 }
+@keyframes Animation3 {
+    to {
+        visibility: hidden;       
+    }
+}
+@keyframes Animation4 {
+    to { 
+        transform: rotate(360deg); 
+    }
+  }

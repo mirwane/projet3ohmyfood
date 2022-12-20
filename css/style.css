@@ -17,6 +17,16 @@
     transform: rotate(0);
   }
 }
+@keyframes Animation3 {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes Animation4 {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .reservation__btn {
   color: white;
   border-radius: 25px 25px 25px 25px;
@@ -117,23 +127,27 @@ footer .footer__ul .footer__ul--name a {
 }
 
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey border */
-  border-top: 16px solid #3498db; /* Blue top half */
-  border-radius: 50%; /* Round corners */
-  width: 120px; /* Width and height of the spinner */
+  display: grid;
+  background-color: #ffffff;
+  opacity: 97%;
+  height: 100vh;
+  position: fixed;
+  inset: 0 0 0 0;
+  z-index: 1;
+  animation: Animation3 0.2s 3s forwards;
+}
+.loader::after {
+  content: "";
+  align-self: center;
+  justify-self: center;
+  border-left: 4px solid #9356DC;
+  border-top: 4px solid #ffffff;
+  border-radius: 50%;
+  width: 120px;
   height: 120px;
-  animation: spin 2s linear infinite; /* Spin animation */
+  animation: Animation4 1.5s linear infinite;
 }
 
-/* Animation keyframes */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 body {
   margin: auto;
 }
@@ -437,7 +451,7 @@ body {
   position: relative;
   padding-bottom: 9px;
 }
-.conteneur .menu .menu__flex .menu__nom .menu--title ::after {
+.conteneur .menu .menu__flex .menu__nom .menu--title::after {
   content: "";
   position: absolute;
   height: 3px;
