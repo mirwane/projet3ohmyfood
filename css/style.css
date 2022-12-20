@@ -134,22 +134,23 @@ footer .footer__ul .footer__ul--name a {
   position: fixed;
   inset: 0 0 0 0;
   z-index: 1;
-  animation: Animation3 0.2s 3s forwards;
+  animation: Animation3 0.1s 1.5s forwards;
 }
 .loader::after {
   content: "";
   align-self: center;
   justify-self: center;
-  border-left: 4px solid #9356DC;
-  border-top: 4px solid #ffffff;
+  border-left: 10px solid #9356DC;
+  border-top: 10px solid #ffffff;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: Animation4 1.5s linear infinite;
+  width: 200px;
+  height: 200px;
+  animation: Animation4 1s linear infinite;
 }
 
 body {
   margin: auto;
+  min-width: 320px;
 }
 
 .header--index {
@@ -491,7 +492,8 @@ body {
   overflow: hidden;
 }
 .conteneur .menu .menu__flex .menu__nom .menu__btn .menu__btn__right .menu__btn--prix {
-  padding: 20px 20px 10px 0px;
+  padding: 29px 20px 0px 0px;
+  font-weight: bold;
 }
 .conteneur .menu .menu__flex .menu__nom .menu__btn .menu__btn__right .menu__btn--check {
   border-radius: 0px 20px 20px 0px;
