@@ -47,86 +47,106 @@
         .menu__flex {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-between;
             @include desktop;
-            
-            .menu__nom{
+            .menu__nom {
                 margin-bottom: 30px;
-            .menu--title {
-                margin-bottom: 15px;
-                position: relative;
-                padding-bottom: 9px;
-                ::after {
-                    content: "";
-                    position: absolute;
-                    height: 3px;
-                    width: 40px;
-                    bottom: 0;
-                    left: 0;
-                    background: #99E2D0;
-                  }
-            }
-            .menu__btn {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                background-color: white;
-                margin-bottom: 10px;
-                border-radius: 20px 20px 20px 20px;
-                animation: Animation1 ease 0.3s;
+                .menu--title {
+                    margin-bottom: 15px;
+                    position: relative;
+                    padding-bottom: 9px;
+                    ::after {
+                        content: "";
+                        position: absolute;
+                        height: 3px;
+                        width: 40px;
+                        bottom: 0;
+                        left: 0;
+                        background: #99E2D0;
+                    }
+                }
+                .menu__btn {
+                    display: flex;
+                    flex-direction: row;
+                    background-color: white;
+                    margin-bottom: 10px;
+                    border-radius: 20px 20px 20px 20px;
+                    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.200);
+                    @media (min-width: 1024px) {
+                        width: 30vw;
+                     }
+                    .menu__btn--name {
+                        display: flex;
+                        flex: 1;
+                        flex-direction: column;
+                        margin: 10px 0px 10px 20px;
+                        overflow: hidden; 
+                        span {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;   
+                        }
+                    }
+                    .menu__btn__right {
+                        display: flex;
+                        flex-direction: row;  
+                        overflow: hidden;
+                        .menu__btn--prix {
+                            padding: 20px 20px 10px 0px;
+                        }     
+                        .menu__btn--check {
+                            border-radius: 0px 20px 20px 00px;
+                            padding: 10px 20px 10px 20px;
+                            background-color: $terciaire-color;
+                            margin-right: -60px;
+                            display: grid;
+                            place-items: center;
+                            i {
+                                border-radius: 50%;
+                                background: white;
+                                padding: 2px 2px 2px 2px;
+                                color: $terciaire-color;    
+                            }
+                        }       
+                    }
+                    &:hover .menu__btn--check{
+                        margin-right: 0px;
+                        transition: all 0.5s;
+                        i {
+                            animation: Animation2 ease 0.5s;
+                        }
+                    }  
+                }
+                .delay-1 {
+                    animation: Animation1 ease 0.6s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+                    animation-delay: calc(0.1s * 1);
+                    visibility: hidden;
+                }
+                .delay-2 {
+                    animation: Animation1 ease 0.6s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+                    animation-delay: calc(0.1s * 2);
+                    visibility: hidden;
+                }
+                .delay-3 {
+                    animation: Animation1 ease 0.6s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+                    animation-delay: calc(0.1s * 3);
+                    visibility: hidden;
+                }
+                .delay-4 {
+                animation: Animation1 ease 0.6s;
                 animation-iteration-count: 1;
                 animation-fill-mode: forwards;
-                .menu__btn--name {
-                    display: flex;
-                    flex-direction: column;
-                    padding: 10px 0px 10px 20px;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;  
-                }
-                .menu__btn__right {
-                    display: flex;
-                    flex-direction: row;  
-                    overflow: hidden;
-                    .menu__btn--prix {
-                        padding: 20px 20px 10px 0px;
-                    }     
-                    .menu__btn--check {
-                        border-radius: 0px 20px 20px 00px;
-                        padding: 10px 20px 10px 20px;
-                        background-color: $terciaire-color;
-                        margin-right: -60px;
-                        display: grid;
-                        place-items: center;
-                        i {
-                            border-radius: 50%;
-                            background: white;
-                            padding: 2px 2px 2px 2px;
-                            color: $terciaire-color;    
-                        }
-                    }       
-                }
-                &:hover .menu__btn--check{
-                    margin-right: 0px;
-                    transition: all 0.5s;
-                    i {
-                        animation: Animation2 ease 0.5s;
-                    }
-                   }  
-            }
-            .delay-1 {
-                animation-delay: calc(0.1s * 1);
-              }
-            .delay-2 {
-                animation-delay: calc(0.1s * 2);
-              }
-            .delay-3 {
                 animation-delay: calc(0.1s * 3);
-              }
-            .delay-4 {
+                visibility: hidden;
                 animation-delay: calc(0.1s * 4);
-              }
+                } 
+            }
         }
-    }
     }
 }

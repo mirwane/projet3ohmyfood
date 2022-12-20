@@ -6,6 +6,7 @@
   100% {
     transform: translateY(0);
     opacity: 1;
+    visibility: visible;
   }
 }
 @keyframes Animation2 {
@@ -115,9 +116,26 @@ footer .footer__ul .footer__ul--name a {
   color: inherit;
 }
 
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey border */
+  border-top: 16px solid #3498db; /* Blue top half */
+  border-radius: 50%; /* Round corners */
+  width: 120px; /* Width and height of the spinner */
+  height: 120px;
+  animation: spin 2s linear infinite; /* Spin animation */
+}
+
+/* Animation keyframes */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 body {
   margin: auto;
-  min-width: 320px;
 }
 
 .header--index {
@@ -157,12 +175,17 @@ body {
 .tutoriel {
   height: 200px;
 }
+@media (min-width: 1024px) {
+  .tutoriel {
+    height: 100px;
+  }
+}
 .tutoriel .tutoriel__title {
   font-weight: bold;
   font-size: 25px;
   margin: 30px 0px 30px 20px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .tutoriel .tutoriel__title {
     text-align: center;
   }
@@ -180,6 +203,11 @@ body {
     flex-direction: row;
   }
 }
+@media (min-width: 1024px) {
+  .tutoriel .tutoriel__flex {
+    justify-content: space-around;
+  }
+}
 .tutoriel .tutoriel__flex .tutoriel__btn {
   display: flex;
   justify-content: center;
@@ -191,7 +219,12 @@ body {
   height: 50px;
   width: 260px;
   background-color: #f7f7f7;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.514);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tutoriel .tutoriel__flex .tutoriel__btn {
+    width: 500px;
+  }
 }
 .tutoriel .tutoriel__flex .tutoriel__btn:hover {
   background-color: rgba(147, 86, 220, 0.1);
@@ -214,6 +247,11 @@ body {
   border-color: #9356DC;
   background-color: #9356DC;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tutoriel .tutoriel__flex .tutoriel__btn .tutoriel__btn--num {
+    margin-right: 500px;
+  }
+}
 .tutoriel .tutoriel__flex .tutoriel__btn .tutoriel__btn--name {
   display: flex;
   align-items: center;
@@ -233,7 +271,7 @@ body {
   font-size: 20px;
   margin-left: 20px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .restaurants .restaurants__title {
     text-align: center;
   }
@@ -264,7 +302,7 @@ body {
   margin-left: 10px;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.514);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 1024px) {
   .restaurants .restaurants__flex .ligne a {
@@ -384,7 +422,7 @@ body {
 .conteneur .menu .menu__flex {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 @media screen and (min-width: 1024px) {
   .conteneur .menu .menu__flex {
@@ -411,21 +449,27 @@ body {
 .conteneur .menu .menu__flex .menu__nom .menu__btn {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   background-color: white;
   margin-bottom: 10px;
   border-radius: 20px 20px 20px 20px;
-  animation: Animation1 ease 0.3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 1024px) {
+  .conteneur .menu .menu__flex .menu__nom .menu__btn {
+    width: 30vw;
+  }
 }
 .conteneur .menu .menu__flex .menu__nom .menu__btn .menu__btn--name {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  padding: 10px 0px 10px 20px;
-  white-space: nowrap;
+  margin: 10px 0px 10px 20px;
+  overflow: hidden;
+}
+.conteneur .menu .menu__flex .menu__nom .menu__btn .menu__btn--name span {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .conteneur .menu .menu__flex .menu__nom .menu__btn .menu__btn__right {
   display: flex;
@@ -457,15 +501,32 @@ body {
   animation: Animation2 ease 0.5s;
 }
 .conteneur .menu .menu__flex .menu__nom .delay-1 {
+  animation: Animation1 ease 0.6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   animation-delay: 0.1s;
+  visibility: hidden;
 }
 .conteneur .menu .menu__flex .menu__nom .delay-2 {
+  animation: Animation1 ease 0.6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   animation-delay: 0.2s;
+  visibility: hidden;
 }
 .conteneur .menu .menu__flex .menu__nom .delay-3 {
+  animation: Animation1 ease 0.6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   animation-delay: 0.3s;
+  visibility: hidden;
 }
 .conteneur .menu .menu__flex .menu__nom .delay-4 {
+  animation: Animation1 ease 0.6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+  visibility: hidden;
   animation-delay: 0.4s;
 }
 
