@@ -323,7 +323,7 @@ body {
 }
 @media (min-width: 1024px) {
   .restaurants .restaurants__flex .ligne a {
-    max-width: 483px;
+    width: 45%;
   }
 }
 .restaurants .restaurants__flex .ligne a:hover {
